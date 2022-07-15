@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./data.js"></script>
+<style>
+    *{padding: 0; margin: 0;}
+#container{
+    margin: 0 auto;
+    width: 1000px;
+    border: 1px solid violet;
+}
+#header{
+    width: 1000px;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+#nav{
+    width: 400px;
+    height: 600px;
+    float: left;
+    border: 1px solid black;
+    
+    
+}
+#nav a{
+    display:block;
+}
+#section{
+    width: 580px;
+    height: 600px;
+    
+    margin-bottom: 10px;
+    float: left;
+    border: 1px solid black;
+    overflow: auto;
+}
+iframe{
+    border: 1px solid black;
+    width: 580px;
+    height: 600px;
+}
+#footer{
+    width: 1000px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;    
+    clear: both;
+}
+a:hover{
+    color: deeppink;
+    background-color: aquamarine;
+}
+a:active{
+    color: aqua;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="header"><img src="롤.png" width="900px" height="180px"></div>
+        <div id="nav">
+        </div>
+        <iframe src="" name="frame1">    
+        </iframe>
+        
+        <div id="footer"><p></p><img src="롤쩜.png" width="1000px" height="300px"></div>
+    </div>
+    <script>
+        for ( let i = 0;i < data.length;i++ ) {
+            const d = data[i];
+            const a = document.createElement('a');
+            a.innerText = (i+1) + "." + d.title;
+
+            a.addEventListener('Click', function() {
+                d.title
+                d.subtitle
+
+                for ( let j = 0; j < d.descriptions.length;j++ ) {
+                    const desc = d.descriptions[j];
+                    li = document.createElement('li');
+                    li.innerText = desc;
+                    document.querySelector('li').appendChild(d);
+                }
+            });
+            console.log(a);
+        }
+    </script>
+</body>
+</html>
