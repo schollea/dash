@@ -240,8 +240,8 @@ const data = [
         ]
     },
     {
-        title: 'TRUE DAMAGE 키아나',
-        subtitle: '가격:1350rp 서사급',
+        title: 'TRUE DAMAGE 키아나 프레스티지',
+        subtitle: '가격:20만원 이상 신화급',
         image: '키아나.jpg',
         descriptions: [
             '세련된 키아나 스킨.',

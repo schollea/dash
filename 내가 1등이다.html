@@ -31,6 +31,7 @@
     width: 580px;
     height: 600px;
     
+    
     margin-bottom: 10px;
     float: left;
     border: 1px solid black;
@@ -49,6 +50,7 @@ iframe{
     border: 1px solid black;    
     clear: both;
 }
+
 a:hover{
     color: deeppink;
     background-color: aquamarine;
@@ -62,9 +64,34 @@ a:active{
     <div id="container">
         <div id="header"><img src="롤.png" width="900px" height="180px"></div>
         <div id="nav">
+        
         </div>
-        <iframe src="" name="frame1">    
-        </iframe>
+        <div id="section">
+        
+            <div>
+                <h3 id="h3">
+                TRUE DAMAGE 키아나 프레스티지
+                </h3>
+            
+                <p id="ptad">
+                가격:20만원 이상 신화급
+                </p>
+                <img id= "img" src="키아나.jpg" width="600px">
+                <ul id="ul">
+                    
+                    <li>
+                    명품 키아나 스킨.
+                    </li>
+                    <li>
+                    소리와 이펙트가 매력적임.
+                    </li>
+                    <li>
+                    루이비통과는 다른 명품같다.
+                    </li>
+            
+                </ul>
+            </div>
+        </div>
         
         <div id="footer"><p></p><img src="롤쩜.png" width="1000px" height="300px"></div>
     </div>
@@ -73,20 +100,36 @@ a:active{
             const d = data[i];
             const a = document.createElement('a');
             a.innerText = (i+1) + "." + d.title;
+            
+        
+            
+            
 
-            a.addEventListener('Click', function() {
-                d.title
-                d.subtitle
+            a.addEventListener('click', function() {
+                console.log(d);
+                document.querySelector('#h3').innerText = d.title;
+                document.querySelector('#ptad').innerText = d.subtitle;
+                document.querySelector('#img').src = d.image;
+                const children = document.querySelector('#ul').children;
 
+                while(children.length > 0 ){
+                const e = children[0];
+                e.remove()
+                
+            }
+
+            
                 for ( let j = 0; j < d.descriptions.length;j++ ) {
                     const desc = d.descriptions[j];
                     li = document.createElement('li');
                     li.innerText = desc;
-                    document.querySelector('li').appendChild(d);
+                    document.querySelector('#ul').appendChild(li);
                 }
             });
+            document.querySelector('#nav').appendChild(a);
             console.log(a);
         }
+    
     </script>
 </body>
 </html>
